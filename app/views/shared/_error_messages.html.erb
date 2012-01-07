@@ -1,0 +1,17 @@
+<% if object.errors.any? %>
+        <div class="alert-message error">
+        <a class="close" href="#">&times;</a>
+    <h2>
+      <%= pluralize(object.errors.count, "error") %>
+      prohibited this <%= object.class.to_s.underscore.humanize.downcase %>
+      from being published:
+    </h2>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% object.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+  
+<% end %>

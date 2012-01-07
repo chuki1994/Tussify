@@ -1,0 +1,13 @@
+<div class="user_info">
+  <a href="<%= user_path(current_user) %>">
+		<%=gravatar_image_tag(current_user.email, :alt=>current_user.name) %>
+
+    <span class="user_name">
+      <%= current_user.name %>
+			<%= current_user.email %>
+    </span>
+    <span class="microposts">
+      <!--<= pluralize(current_user.reports.count, "report") %> -->
+    </span>
+  </a>
+</div>
