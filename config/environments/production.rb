@@ -43,7 +43,7 @@ Tussify::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( default.css nivo-slider.css pages.css.scss scaffolds.css.scss jquery-1.4.3.min.js jquery-fancybox-1.3.4.pack.js jquery.nivo.slider.pack.js pages.js )
+  config.assets.precompile += %w( default.css nivo-slider.css pages.css.scss scaffolds.css.scss jquery-1.4.3.min.js jquery.fancybox-1.3.4.pack.js jquery.nivo.slider.pack.js pages.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
