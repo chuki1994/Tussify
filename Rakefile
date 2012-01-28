@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-HipOrchive::Application.load_tasks
+Tussify::Application.load_tasks

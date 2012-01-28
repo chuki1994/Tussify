@@ -6,10 +6,9 @@
     <%= render 'layouts/stylesheets' %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
-	<%= stylesheet_link_tag "bootstrap" %>
   </head>
   <body>
-    <div class="container">
+    <div id="body-wrapper" class="clearfix"><!--start body-wrapper-->
       <%= render 'layouts/header' %>
       <section class="round">
         <% flash.each do |key, value| %>
