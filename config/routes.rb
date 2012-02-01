@@ -8,6 +8,24 @@ Tussify::Application.routes.draw do
   end
   
   resources :users
+
+  resources :questions
+
+  get "quiz/index"
+  
+  post "quiz/start"
+
+  get "quiz/question"
+  
+  post "quiz/question"
+
+  post "quiz/answer"
+
+  get "quiz/end"
+  
+  post "choices/create"
+  
+  post "choices/destroy"
    
   root :to => 'pages#home'
   
