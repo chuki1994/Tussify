@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @userProfile = User.find(params[:id])
     @user = current_user
     @title = @userProfile.name
+    @average = session[:average]
   end
 end 
