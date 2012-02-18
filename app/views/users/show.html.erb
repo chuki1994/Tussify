@@ -4,7 +4,9 @@
       <h1>
         <%= gravatar_for @userProfile %>
         <%= @userProfile.name %>
+        <% if user_signed_in? %>
         <p>Rating: <%=@average %> %</p>
+        <% end %>
       </h1>
 
 </table>
