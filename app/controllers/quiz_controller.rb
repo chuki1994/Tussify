@@ -55,6 +55,18 @@ class QuizController < ApplicationController
 	 @total   = session[:total]
 	 
 	 @score = @correct * 100 / @total
+
+         begin
+           session[:total_correct]
+         rescue NameError
+           session[:total_correct] = 0
+           session[:total_num] = 0
+         end
+         session[:total_correct] = session[:total_correct] + @correct
+         session[:total_num] = session[:total_num] + @total
+
+         @average = session[:total_correct] * 100 / session[:total_num]
+
   end
 
 end
