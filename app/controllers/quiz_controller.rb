@@ -64,6 +64,7 @@ class QuizController < ApplicationController
 
          session[:average] = session[:total_correct] * 100 / session[:total_num]
          @average = session[:average]
+         @average = 0 if session[:average].nil?
 
   end
 

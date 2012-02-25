@@ -36,4 +36,8 @@ class PagesController < ApplicationController
 def developers
     @title = "Developers"
   end
+
+def howitworks
+    @title = "How it Works"  
+end
 end

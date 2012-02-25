@@ -1,62 +1,206 @@
 <% if signed_in? %>
-Hello Genius
 
-<% else %>
-<div id="body-wrapper" class="clearfix"><!--start body-wrapper-->
-  <div style="padding-top:40px;" class="slider-wrapper theme-default">
-    <div id="slider" class="nivoSlider">
-            <%=image_tag('slide1.png')%>
-      <%=image_tag('slide2.png')%>
-    </div>
-    </div>
-
-  <div class="box">
-    <h1>Learn, Play, and Compete with Friends!</h1>
-    </div>
-
-  <div class="one_fourth"><!--start top half content-->
-    <h3>Become a Tussifier! Compete against the best in the world!</h3>
-    <p>Create a profile! <a href="#">link</a></p>
-  </div>
-  <div class="one_fourth">
-    <div class="fancy"><%=image_tag('210-150-1.png')%></div>
-  </div>
-  <div class="one_fourth">
-    <div class="fancy"><%=image_tag('210-150-2.png')%></div>
-  </div>
-  <div class="one_fourth column-last">
-    <div class="fancy"><%=image_tag('210-150-3.png')%></div>
-  </div><!--end top half content-->
-
-  <div class="clear"></div>
-
-  <div class="one_fourth">
-    <h3>One</h3>
-    <p>Practice Problems!!</p>
-  </div>
-  <div class="one_fourth">
-    <h3>Two</h3>
-    <p>Compete against Friends!</p>
-  </div>
-  <div class="one_fourth">
-    <h3>Three</h3>
-    <p>Tussify is in its development stage.</p>
-  </div>
-  <div class="one_fourth column-last">
-    <h3>Four</h3>
-    <p>Enjoy!</p>
-  </div>
+<div id="nav_wrap">
+    <div id="nav">
+  
+        <a id="logo" href="index.html">Tussify</a>
     
-    <div class="clear"></div>
+        <div id="main_nav">
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Quiz", "quiz/index" %></li>
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Friends", users_path %></li>
+        <li><%= link_to "Command Center", "/command" %></li>
+        <li><%=link_to "Sign Out", "/signout" %></li>
+      </ul>
+        </div> <!--end main_nav-->
+    
+    </div> <!--end nav-->
+</div> <!--end nav_wrap-->
 
-</div><!--end-body wrapper-->
+<div id="header_wrap">
+  <div id="header_subpage">
 
-    <!--Nivo Slider-->
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script>
-  <!--Nivo Slider-->
+    <div id="header_msg">
+            <% if user_signed_in? %>
+      <p class="header_p">Your Rating: <%=@average %> %</p>
+        <% end %>
+
+        <style>
+
+        #contain {
+        width:200px;
+        margin:none;
+        position:relative;
+        left:200px;
+        margin-top:-67px;
+        }
+
+        #backbar {
+        background:gray;
+        height:25px;
+        width:100%;
+        }
+
+        #bar {
+        background:red;
+        height:25px;
+        width: <%= @average %>%;
+        }
+
+        </style>
+        <div id="contain">
+        <div id='backbar'>
+        <div id = 'bar'>
+        </div>
+        </div>
+        </div>
+    </div>
+
+  </div> <!--end header-->
+</div> <!--end header_wrap-->
+<div id ='main'>
+<p> Hello!</p>
+</div>
+<% else %>
+
+<head>
+
+
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+<![endif]--> 
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/style_ie7.css" />
+<![endif]-->
+
+</head>
+
+<body>
+
+<div id="nav_wrap">
+    <div id="nav">
+  
+        <a id="logo" href="index.html">Tussify</a>
+    
+        <div id="main_nav">
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", "/about" %></li>
+        <li><%= link_to "How it Works", "/howitworks" %></li>
+        <li><%= link_to "Contact", "/contact" %></li>
+        <li><%= link_to "Sign up", signup_path%></li>
+        <li><%= link_to "Sign in", signin_path%></li>
+      </ul>
+        </div> <!--end main_nav-->
+    
+    </div> <!--end nav-->
+</div> <!--end nav_wrap-->
+    
+<div id="header_wrap">
+  <div id="header">
+    
+    <div id="small_slider">
+            <ul>
+                <li> 
+                  <h4 class="header_h">Hello there!</h4>
+                    <p class="header_p"> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Sed non nisl non massa pharetra ornare.</p>
+                </li>
+                     
+            </ul>
+        </div> <!-- end small_slider-->
+        
+        <div id="big_slider">
+            <ul>        
+        <li><a href="gallery.html"><%=image_tag('photos/image_01.jpg')%></a></li>
+         
+      </ul>
+        </div>
+        
+  </div> <!--end header-->
+</div> <!--end header_wrap-->
+
+<div id="main_wrap">
+  <div id="main">
+    
+      <div id="main_content">
+        
+            <div class="col_3">
+                <h3 class="title">Introduction</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a arcu non mi congue elementum. Suspendisse eu semper augue. Praesent luctus vehicula posuere. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam ut orci augue, a <a href="#">ullamcorper lorem</a>. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Sed non nisl non massa pharetra ornare.</p>
+                <p>Nullam ut orci augue, a <a href="#">ullamcorper lorem</a>. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Sed non nisl non massa pharetra ornare.</p>        
+            </div>
+            
+            <div class="space"></div>
+            
+            <h3>How it Works</h3>
+            
+            <div class="col_1_box">
+                <h4>Lorem ipsum</h4>
+                <p>Quisque vestibulum, orci a erat pulvinar cursus, et ipsum lorem suscipit lectus.</p>
+                <%=image_tag('photos/preview_01.jpg')%>              
+            </div> 
+            
+            <div class="col_1_box">
+                <h4>Consectetur</h4>
+                <p>Quisque vestibulum, orci erat a pulvinar cursus, et ipsum lorem suscipit lectus.</p>
+                <%=image_tag('photos/preview_02.jpg')%>
+            </div>
+            
+            <div class="col_1_box_last">
+                <h4>Pellentesque</h4>
+                <p>Quisque vestibulum, orci erat a pulvinar cursus, et ipsum lorem suscipit lectus.</p>
+                <%=image_tag('photos/preview_03.jpg')%>
+            </div> 
+            
+    </div> <!--end main_content-->
+       
+    <div id="sidebar">
+        
+      <div class="col_1_last">
+        <h3>Lorem Ipsum</h3>
+        <ul class="events"> 
+          <li>
+          <p class="date">Lorem Ipsum</p>
+          <p>Aenean quis metus ut ante porttit amet consectetur fringilla.</p>
+          <a href="#">Read all</a>
+          </li>
+          
+          <li>
+          <p class="date">Lorem Ipsum</p>
+          <p>Aenean quis metus ut ante porttit amet consectetur fringilla.</p>
+          <a href="#">Read all</a>
+          </li>
+          
+          <li>
+          <p class="date">Lorem Ipsum</p>
+          <p>Aenean quis metus ut ante porttit amet consectetur fringilla.</p>
+          <a href="#">Read all</a>        
+          </li>           
+        </ul>
+      </div>
+            
+            <div class="space"></div>
+            
+      <div class="col_1_last">
+        <h3>Lorem Ipsum</h3>
+        <ul class="menu"> 
+          <li>Lorem Ipsum</li>   
+          <li>Lorem Ipsum</li> 
+          <li>Lorem Ipsum</li>                           
+        </ul>
+      </div>            
+        
+    </div> <!--end sidebar-->
+  </div> <!--end main-->
+</div> <!--end main_wrap-->
+
+
+
+</body>
+
   
 <% end %>

@@ -25,5 +25,5 @@ production:
   adapter: postgresql
   username: 
   password: 
-  database: Hip-Orchive
+  database: Tussify
   pool: 5

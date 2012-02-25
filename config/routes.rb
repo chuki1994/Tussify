@@ -39,6 +39,7 @@ Tussify::Application.routes.draw do
   match '/testimonials' => 'pages#testimonials'
   match '/privacy' => 'pages#privacy'
   match '/terms' => 'pages#terms'
+  match '/howitworks' => 'pages#howitworks'
 
     
   # The priority is based upon order of creation:

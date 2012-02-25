@@ -3,38 +3,7 @@
     
       <h1>
         <%= gravatar_for @userProfile %>
-        <%= @userProfile.name %>
-        <% if user_signed_in? %>
-        <p>Rating: <%=@average %> %</p>
-        <% end %>
-
-        <style>
-
-        #contain {
-        width:200px;
-        margin:none;
-        }
-
-        #backbar {
-        background:gray;
-        height:25px;
-        width:100%;
-        }
-
-        #bar {
-        background:red;
-        height:25px;
-        width: <%= @average %>%;
-        }
-
-        </style>
-        <div id="contain">
-        <div id='backbar'>
-        <div id = 'bar'>
-        </div>
-        </div>
-        </div>
-        
+        <%= @userProfile.name %>     
       </h1>
 
 </table>

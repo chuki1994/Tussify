@@ -6,18 +6,29 @@
     <%= render 'layouts/stylesheets' %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
+
+<%= stylesheet_link_tag "style.css" %>
+<%= stylesheet_link_tag "jquery.fancybox-1.3.1" %>
+<%= javascript_include_tag "jquery-1.4.2.min" %>
+<%= javascript_include_tag "jquery.fancybox-1.3.1.pack" %>
+<%= javascript_include_tag "ajax" %>
+<%= javascript_include_tag "jCarouselLite" %>
+<%= javascript_include_tag "jquery.easing.1.1" %>
   </head>
   <body>
-    <div id="body-wrapper" class="clearfix"><!--start body-wrapper-->
+    
       <%= render 'layouts/header' %>
+      <div id='main'>
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>
         <%= yield %>
       </section>
+      </div>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+
     </div>
   </body>
 </html>
